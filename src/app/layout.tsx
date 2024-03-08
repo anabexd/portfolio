@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <>
     <head>
-        <title>Anabe | portfolio</title>
+        <title>Ana Beatriz Martins</title>
         <meta name="description" content="Ana Beatriz Martins Fullstack Developer Portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
