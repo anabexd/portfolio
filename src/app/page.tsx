@@ -11,7 +11,7 @@ export default function Home() {
           <p className="text-9xl font-bold italic">developer</p>
         </div>
         <p className="text-indigo-200 w-3/5 text-xl leading-8 font-semibold opacity-75">
-          I'm 18 years old and have been developing systems for 1 year working
+          I&apos;m 18 years old and have been developing systems for 1 year working
           as a freelancer.
         </p>
         <div className="flex gap-5">
