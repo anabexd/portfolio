@@ -1,16 +1,16 @@
 'use client'
-import Image from "next/image";
-import Link from "next/link";
-import SideBar from "./ui/sideBar";
+import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import SideBar from './ui/sideBar'
 
-export default function Home() {
-
+export default function Home (): React.JSX.Element {
   return (
     <>
     <main className="flex min-h-screen flex-col items-center justify-center w-100 select-none">
     <SideBar />
       <div className="flex items-left flex-col gap-7">
-        <p className="text-slate-100 text-2xl">hi, I&apos;m Anabe {"👋"}</p>
+        <p className="text-slate-100 text-2xl">hi, I&apos;m Anabe {'👋'}</p>
         <div className="text-indigo-300 leading-loose uppercase">
           <p className="text-6xl font-extrabold">fullstack</p>
           <p className="text-8xl font-extrabold">developer</p>
@@ -32,12 +32,11 @@ export default function Home() {
     </main>
     <main className="flex min-h-screen flex-col items-center justify-top w-100 p-20">
       <div className="flex items-left flex-col gap-7">
-        <p className="text-slate-100 text-2xl font-mono">{"> "}my projects</p>
+        <p className="text-slate-100 text-2xl font-mono">{'>'}my projects</p>
         <div className="text-indigo-300 leading-loose">
-
       </div>
       </div>
     </main>
     </>
-  );
+  )
 }

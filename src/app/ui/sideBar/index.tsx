@@ -1,6 +1,7 @@
-import Image from "next/image";
+import React from 'react'
+import Image from 'next/image'
 
-const SideBar = () => {
+const SideBar = (): React.JSX.Element => {
   return (
   <>
   <div className="flex flex-col fixed left-0 ml-10 border border-indigo-300 divide-y divide-indigo-300 rounded-lg p-3">
@@ -10,6 +11,6 @@ const SideBar = () => {
   </div>
   </>
   )
-};
+}
 
-export default SideBar;
+export default SideBar
