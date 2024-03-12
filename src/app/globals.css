@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 15, 17, 36;
   --background-end-rgb: 10, 10, 10;
+  --secondary-color-rgb: 29, 31, 85;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,7 +17,7 @@
   }
 }
 
-body {
+/* #main-home {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,10 +25,21 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+body{
+  background: rgb(var(--background-end-rgb));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+::-webkit-scrollbar{
+  background: rgb(var(--background-end-rgb));
+  width: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background: rgb(var(--background-start-rgb));
 }
