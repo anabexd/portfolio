@@ -30,6 +30,9 @@ body{
   background: rgb(var(--background-end-rgb));
 }
 
+button {
+  background-color: #262C48;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;

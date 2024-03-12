@@ -14,9 +14,9 @@ export default function Home (): React.JSX.Element {
         <p className='text-indigo-100 text-2xl font-semibold'>hi, I&apos;m Anabe</p>
         <span className='animate-bounce text-2xl ml-2'>{'👋'}</span>
         </div>
-        <div className='font-extrabold italic bg-clip-text text-transparent bg-gradient-to-r from-indigo-100 to-indigo-300'>
-          <p className='text-7xl'>fullstack</p>
-          <p className='text-8xl'>developer</p>
+        <div className='font-extrabold italic'>
+          <p className='text-7xl text-indigo-400'>fullstack</p>
+          <p className='text-8xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-indigo-600'>developer</p>
         </div>
         <p className='text-indigo-300 w-3/5 text-xl leading-8 font-semibold pt-3'>
           I&apos;m 18 years old and have been developing systems for 1 year working
@@ -34,12 +34,26 @@ export default function Home (): React.JSX.Element {
           </Link>
         </div>
       </div>
-      <Image src='/profile.png' width={250} height={250} alt='' className='select-none pointer-events-none'></Image>
+      <Image src='/profile2.svg' width={260} height={260} alt='' className='select-none pointer-events-none'></Image>
     </main>
     <main className='flex min-h-screen flex-row items-start justify-center w-100'>
-      <div className="divide-y divide-opacity-35 divide-indigo-100 flex flex-col justify-center items-center">
-      <p className='text-indigo-300 text-xl font-semibold'>My projects</p>
-      <p className='text-indigo-300 text-xl font-semibold'>CantinaGO</p>
+      <div className="flex flex-col justify-center items-center">
+      <p className='text-slate-200 text-4xl font-semibold py-20'>My projects</p>
+      <div className="divide-x grid grid-cols-2"></div>
+      <div className="flex flex-col items-center justify-center">
+      <p className='text-indigo-300 text-3xl font-semibold pb-12 pt-12'>CantinaGO</p>
+      <Image className='relative' src="/devices-01.png" width={400} height={400} alt=''></Image>
+      <Image className='absolute -z-10 mt-20' src="/square-gradient.svg" width={300} height={400} alt=''></Image>
+      </div>
+      <div className="text-slate-300 w-4/6 text-center">
+        <p className='py-20 text-xl'>Project designed to solve the problem of queues in school and institution canteens through a virtual menu.</p>
+        <div className="flex flex-row items-center justify-center gap-6">
+        <button className='h-12 px-6 rounded-md text-indigo-300 hover:opacity-90 flex items-center gap-3'>
+          <img src="/web.svg" alt="" />deploy</button>
+        <button className='h-12 px-6 rounded-md text-indigo-300 hover:opacity-90 flex items-center gap-3'>
+        <img src="/code.svg" alt="" />code</button>
+        </div>
+      </div>
       </div>
     </main>
     </>
