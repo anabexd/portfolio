@@ -17,7 +17,7 @@
   }
 }
 
-/* #main-home {
+body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -25,10 +25,10 @@
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-} */
-body{
-  background: rgb(var(--background-end-rgb));
 }
+/* body{
+  background: rgb(var(--background-end-rgb));
+} */
 
 button {
   background-color: #262C48;
