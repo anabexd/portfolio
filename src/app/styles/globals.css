@@ -18,6 +18,8 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -25,14 +27,16 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
-/* body{
-  background: rgb(var(--background-end-rgb));
-} */
+  /* background: rgb(var(--background-end-rgb)); */
+}  
 
-button {
-  background-color: #262C48;
+.circle-2 {
+  bottom: 0; /* Adjust distance from bottom */
+  left: 50px;
+  transform: translateX(-50%);
+  background: radial-gradient(circle at center, #ffffff00 50%, transparent 50%);
 }
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

@@ -1,75 +1,80 @@
-'use client'
-import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import SideBar from '@/components/ui/sideBar'
+import { Container } from '@/components/ui/container'
 
-export default function Home (): React.JSX.Element {
+const Home = () => {
   return (
-    <>
-      <main
-        className='flex items-center justify-center container min-h-screen select-none'
-        id='main-home'
-      >
-        <SideBar />
-        <div className='flex items-left flex-col gap-12'>
-          <div className='flex flex-row items-center'>
-            <p className='text-indigo-100 text-2xl font-semibold'>
-              hi, I&apos;m Anabe
+    <Container className="flex-wrap gap-x-8">
+      <div className="space-y-6 sm:flex-1">
+        <div className="flex items-center gap-2">
+          <p className="text-indigo-100 text-2xl font-semibold">
+            hi, I&apos;m Anabe
+          </p>
+          <span className="animate-bounce text-2xl">{'👋'}</span>
+        </div>
+
+        <div className="flex items-center gap-4 flex-wrap">
+          <div className="font-extrabold italic flex-1 bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-indigo-700">
+            <p className="text-3xl sm:text-5xl md:text-5xl lg:text-7xl">
+              fullstack
             </p>
-            <span className='animate-bounce text-2xl ml-2'>{'👋'}</span>
-          </div>
-          <div className='font-extrabold italic'>
-            <p className='text-7xl text-indigo-400'>fullstack</p>
-            <p className='text-8xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-indigo-700'>
+            <p className="text-4xl sm:text-6xl md:text-6xl lg:text-8xl">
               developer
             </p>
           </div>
-          <p className='text-indigo-200 w-3/5 text-xl leading-8 font-semibold pt-3'>
-            I&apos;m 18 years old and have been developing systems for 1 year
-            working as a freelancer.
-          </p>
-          <div className='flex gap-6 transition ease-in-out delay-150'>
-            <Link target='_blank' href='https://github.com/anabexd'>
-              <Image
-                className='hover:-translate-y-1 hover:scale-110 duration-300'
-                src='/mdi_github.svg'
-                width={40}
-                height={40}
-                alt=''
-              ></Image>
-            </Link>
-            <Link target='_blank' href='https://linkedin.com/in/anabe-sc'>
-              <Image
-                className='hover:-translate-y-1 hover:scale-110 duration-300'
-                src='/mdi_linkedin.svg'
-                width={40}
-                height={40}
-                alt=''
-              ></Image>
-            </Link>
-            <Link
-              target='_blank'
-              href='https://drive.google.com/file/d/18tVLLld8qB_2HfDr6YQDsj2zGgExbaxE/view?usp=sharing'
-            >
-              <Image
-                className='hover:-translate-y-1 hover:scale-110 duration-300'
-                src='/mdi_paper.svg'
-                width={40}
-                height={40}
-                alt=''
-              ></Image>
-            </Link>
+
+          <div className="flex items-end">
+            <div className="size-28 sm:size-48 md:size-52 lg:size-64 relative">
+            <Image
+                src="/profile.png"
+                width={600}
+                height={600}
+                className="select-none pointer-events-none"
+                alt="My profile picture"
+              />
+            </div>
           </div>
         </div>
-        <Image
-          src='/profile2.svg'
-          width={260}
-          height={260}
-          alt=''
-          className='select-none pointer-events-none'
-        ></Image>
-      </main>
-    </>
+        <p className="text-indigo-200 max-w-sm sm:max-w-[20.6rem] md:max-w-sm lg:max-w-[26.8rem] md:text-lg lg:text-xl lg:leading-8 font-semibold">
+          I&apos;m 18 years old and have been freelancing as a full-stack
+          developer for a year.
+        </p>
+
+        <div className="flex gap-6 transition ease-in-out delay-150">
+          <Link target="_blank" href="https://github.com/anabexd">
+            <Image
+              className="hover:-translate-y-1 hover:scale-110 duration-300"
+              src="/mdi_github.svg"
+              width={40}
+              height={40}
+              alt="GitHub"
+            />
+          </Link>
+          <Link target="_blank" href="https://linkedin.com/in/anabe-sc">
+            <Image
+              className="hover:-translate-y-1 hover:scale-110 duration-300"
+              src="/mdi_linkedin.svg"
+              width={40}
+              height={40}
+              alt="LinkedIn"
+            />
+          </Link>
+          <Link
+            target="_blank"
+            href="https://drive.google.com/file/d/18tVLLld8qB_2HfDr6YQDsj2zGgExbaxE/view?usp=sharing"
+          >
+            <Image
+              className="hover:-translate-y-1 hover:scale-110 duration-300"
+              src="/mdi_paper.svg"
+              width={40}
+              height={40}
+              alt="Curriculum"
+            />
+          </Link>
+        </div>
+      </div>
+    </Container>
   )
 }
+
+export default Home
