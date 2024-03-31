@@ -10,8 +10,12 @@ const Projects = () => {
         <p className="text-slate-300 text-4xl font-semibold text-center">
           My projects
         </p>
-
-        <div className="divide-x divide-indigo-300 grid lg:grid-cols-2 gap-20">
+            {/* <div className="fixed ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" className="bi bi-circle-fill fill-indigo-300" viewBox="0 0 16 16">
+              <circle cx="8" cy="8" r="8" />
+            </svg>
+          </div> */}
+        <div className="divide-x divide-indigo-300 divide-opacity-50 grid lg:grid-cols-2 row-auto gap-20">
           <div className="flex flex-col items-center justify-center">
             <p className="text-indigo-300 text-3xl font-semibold">CantinaGO</p>
             <div className="bg-[url(/square-gradient.svg)] bg-contain bg-no-repeat bg-center -z-10 rounded-lg h-full w-full p-5 flex flex-col items-center">
@@ -22,8 +26,6 @@ const Projects = () => {
                 height={500}
                 alt=""
               />
-            </div>
-            <div className="">
             </div>
           </div>
           <div className="pl-10 flex flex-col space-y-8">
@@ -38,10 +40,10 @@ const Projects = () => {
             </div>
 
             <div className="flex items-center gap-4">
-              <LinkButton href="#" size="lg" leftIcon={Globe}>
+              <LinkButton href="https://cantina-go.vercel.app/" target='_blank' size="lg" leftIcon={Globe}>
                 deploy
               </LinkButton>
-              <LinkButton href="#" size="lg" leftIcon={CodeXml}>
+              <LinkButton href="https://github.com/anabexd/cantina_go" target='_blank' size="lg" leftIcon={CodeXml}>
                 code
               </LinkButton>
             </div>

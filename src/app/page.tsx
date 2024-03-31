@@ -27,8 +27,8 @@ const Home = () => {
             <div className="size-28 sm:size-48 md:size-52 lg:size-64 relative">
             <Image
                 src="/profile.png"
-                width={600}
-                height={600}
+                width={650}
+                height={650}
                 className="select-none pointer-events-none"
                 alt="My profile picture"
               />
