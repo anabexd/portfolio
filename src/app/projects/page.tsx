@@ -10,17 +10,12 @@ const Projects = () => {
         <p className="text-slate-300 text-4xl font-semibold text-center">
           My projects
         </p>
-            {/* <div className="fixed ">
-            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" className="bi bi-circle-fill fill-indigo-300" viewBox="0 0 16 16">
-              <circle cx="8" cy="8" r="8" />
-            </svg>
-          </div> */}
         <div className="divide-x divide-indigo-300 divide-opacity-50 grid lg:grid-cols-2 row-auto gap-20">
           <div className="flex flex-col items-center justify-center">
             <p className="text-indigo-300 text-3xl font-semibold">CantinaGO</p>
             <div className="bg-[url(/square-gradient.svg)] bg-contain bg-no-repeat bg-center -z-10 rounded-lg h-full w-full p-5 flex flex-col items-center">
               <Image
-                className="mt-10 size-fit hover:scale-110 duration-300"
+                className="mt-10 hover:scale-110 duration-300"
                 src="/devices-01.png"
                 width={500}
                 height={500}
