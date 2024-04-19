@@ -30,6 +30,20 @@ body {
   /* background: rgb(var(--background-end-rgb)); */
 }  
 
+.timeline-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%; /* Position the divider in the middle */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the divider */
+  width: 1px; /* Adjust width for line thickness */
+  height: 100%; /* Adjust height to span the container */
+  background-color: indigo-300; /* Adjust color as needed */
+  opacity: 0.5; /* Adjust opacity as needed */
+  z-index: 0; /* Place the line behind content */
+}
+
+
 .circle-2 {
   bottom: 0; /* Adjust distance from bottom */
   left: 50px;

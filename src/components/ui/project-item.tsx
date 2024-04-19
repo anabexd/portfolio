@@ -1,5 +1,5 @@
 import { LinkButton } from '@/components/link-button'
-import { CodeXml, Globe, Projector } from 'lucide-react'
+import { CodeXml, Globe } from 'lucide-react'
 import Image from 'next/image'
 
 interface Project {
@@ -10,12 +10,15 @@ interface Project {
     srcDeploy: string,
     srcCode: string,
     srcStack: string,
+    isInverted: boolean
 }
 
 function ProjectItem(project: Project): JSX.Element {
     return <>
-        <div className="divide-x divide-indigo-300 divide-opacity-50 grid lg:grid-cols-2 row-auto gap-20">
-            <div className="flex flex-col items-center justify-center">
+        <div className="grid lg:grid-cols-2 row-auto gap-20">
+            <div className={`flex flex-col items-center justify-center ${project.isInverted ? `order-2` : `order-1`}`} 
+            // style={{ order: project.isInverted ? '2' : '1' }}
+            >
                 <p className="text-indigo-300 text-3xl font-semibold">{project.title}</p>
                 <div className="bg-[url(/square-gradient.svg)] bg-contain bg-no-repeat bg-center -z-10 rounded-lg h-full w-full p-5 flex flex-col items-center">
                     <Image
@@ -27,7 +30,7 @@ function ProjectItem(project: Project): JSX.Element {
                     />
                 </div>
             </div>
-            <div className="pl-10 flex flex-col space-y-8">
+            <div className={`pl-10 flex flex-col space-y-8 ${project.isInverted ? `order-1 text-right` : `order-2`}`}>
                 <div className="space-y-6 mb-5">
                     <p className="text-indigo-300 text-xl font-semibold">
                         {project.date}
@@ -37,7 +40,7 @@ function ProjectItem(project: Project): JSX.Element {
                     </p>
                 </div>
 
-                <div className="flex items-center gap-4">
+                <div className={`flex items-center gap-4 ${project.isInverted ? 'justify-end' : ''}`}>
                     <LinkButton href={project.srcDeploy} target='_blank' size="lg" leftIcon={Globe}>
                         deploy
                     </LinkButton>
@@ -46,7 +49,7 @@ function ProjectItem(project: Project): JSX.Element {
                     </LinkButton>
                 </div>
 
-                <div> 
+                <div className={project.isInverted ? 'w-100 flex justify-end' : ''}> 
                     <img src={`https://skillicons.dev/icons?i=${project.srcStack}`} />
                 </div>
             </div>
