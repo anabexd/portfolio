@@ -16,8 +16,7 @@ interface Project {
 function ProjectItem(project: Project): JSX.Element {
     return <>
         <div className="grid lg:grid-cols-2 row-auto gap-20">
-            <div className={`flex flex-col items-center justify-center ${project.isInverted ? `order-2` : `order-1`}`} 
-            // style={{ order: project.isInverted ? '2' : '1' }}
+            <div className={`flex flex-col items-center justify-center ${project.isInverted ? `order-2` : `order-1`}`}
             >
                 <p className="text-indigo-300 text-3xl font-semibold">{project.title}</p>
                 <div className="bg-[url(/square-gradient.svg)] bg-contain bg-no-repeat bg-center -z-10 rounded-lg h-full w-full p-5 flex flex-col items-center">
@@ -49,7 +48,7 @@ function ProjectItem(project: Project): JSX.Element {
                     </LinkButton>
                 </div>
 
-                <div className={project.isInverted ? 'w-100 flex justify-end' : ''}> 
+                <div className={project.isInverted ? 'w-100 flex justify-end' : ''}>
                     <img src={`https://skillicons.dev/icons?i=${project.srcStack}`} />
                 </div>
             </div>

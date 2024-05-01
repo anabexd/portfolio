@@ -1,13 +1,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Container } from '@/components/ui/container'
+import { Github, GithubIcon, Linkedin, LucideIcon, Paperclip, PaperclipIcon } from 'lucide-react'
 
 const Home = () => {
   return (
     <Container className="flex-wrap gap-x-8">
       <div className="space-y-6 sm:flex-1">
         <div className="flex items-center gap-2">
-          <p className="text-indigo-100 text-2xl font-semibold">
+          <p className="text-2xl text-gray-700 font-semibold">
             hi, I&apos;m Anabe
           </p>
           <span className="animate-bounce text-2xl">{'👋'}</span>
@@ -35,40 +36,29 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <p className="text-indigo-200 max-w-sm sm:max-w-[20.6rem] md:max-w-sm lg:max-w-[26.8rem] md:text-lg lg:text-xl lg:leading-8 font-semibold">
+        <p className="text-slate-500 max-w-sm sm:max-w-[20.6rem] md:max-w-sm lg:max-w-[26.8rem] md:text-lg lg:text-xl lg:leading-8 font-semibold">
           I&apos;m 18 years old and have been freelancing as a full-stack
           developer for a year.
         </p>
 
-        <div className="flex gap-6 transition ease-in-out delay-150">
-          <Link target="_blank" href="https://github.com/anabexd">
-            <Image
-              className="hover:-translate-y-1 hover:scale-110 duration-300"
-              src="/mdi_github.svg"
-              width={40}
-              height={40}
-              alt="GitHub"
+        <div className="flex text-indigo-400 gap-6 transition ease-in-out delay-150">
+          <Link target="_blank" href="https://github.com/anabexd"  className="hover:-translate-y-1 hover:scale-110 duration-300">
+            <GithubIcon 
+            width={30} height={30}
             />
           </Link>
-          <Link target="_blank" href="https://linkedin.com/in/anabe-sc">
-            <Image
-              className="hover:-translate-y-1 hover:scale-110 duration-300"
-              src="/mdi_linkedin.svg"
-              width={40}
-              height={40}
-              alt="LinkedIn"
+          <Link target="_blank" href="https://linkedin.com/in/anabe-sc"  className="hover:-translate-y-1 hover:scale-110 duration-300">
+            <Linkedin 
+            width={30} height={30}
             />
           </Link>
           <Link
             target="_blank"
             href="https://drive.google.com/file/d/18tVLLld8qB_2HfDr6YQDsj2zGgExbaxE/view?usp=sharing"
-          >
-            <Image
-              className="hover:-translate-y-1 hover:scale-110 duration-300"
-              src="/mdi_paper.svg"
-              width={40}
-              height={40}
-              alt="Curriculum"
+            className="hover:-translate-y-1 hover:scale-110 duration-300"
+         >
+            <PaperclipIcon
+            width={25} height={25}
             />
           </Link>
         </div>
