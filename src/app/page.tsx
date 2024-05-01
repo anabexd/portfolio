@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Container } from '@/components/ui/container'
-import { Github, GithubIcon, Linkedin, LucideIcon, Paperclip, PaperclipIcon } from 'lucide-react'
+import { GithubIcon, Linkedin, PaperclipIcon } from 'lucide-react'
 
 const Home = () => {
   return (

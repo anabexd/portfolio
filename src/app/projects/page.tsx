@@ -6,7 +6,7 @@ const Projects = () => {
   return (
     <Container>
       <div className="space-y-24 py-32">
-        <p className="text-slate-300 text-4xl font-semibold text-center pb-20">
+        <p className="text-slate-500 text-4xl font-semibold text-center pb-20">
           My projects
         </p>
         <div className="h-full relative flex flex-col gap-y-80">
